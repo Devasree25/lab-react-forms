@@ -53,47 +53,64 @@ const Forms =()=>{
         }
         return error;
     }
+   
 
-    // let fSubmit = null/undefined
-    // let arr = []
+   
     return (
         <>
         <div className="form-parent">
             <form onSubmit={formSubmit}>
                 <div>
-                    {fSubmit && <p>Registration Sucessful!</p> }
+                    {fSubmit && <p id="p">Sucessfully Registered 😊!</p> }
               
                     
                 </div>
+                <h2 id="h2">REGISTRATION FORM</h2>
+
+                <div className="box">
                 <label htmlFor="firstname">Enter first name</label>
-                <input type="text" name="firstname" placeholder="first name"
+                <input type="text"id="text" name="firstname" placeholder="first name"
                 onChange={handleInput}
+                style={{ textAlign: "center" }}
                 />
                 {formError.firstname ? <p>{formError.firstname}</p> : ""}
+                </div>
+
                 
 
-                <label htmlFor="lastname">Enter last name</label>
-                <input type="text" name="lastname" placeholder="last name"
+               <div className="box2">
+               <label htmlFor="lastname">Enter last name</label>
+                <input type="text" id="text" name="lastname" placeholder="last name"
                 onChange={handleInput}
+                style={{ textAlign: "center" }}
                 />
                 {formError.lastname ? <p>{formError.lastname}</p> : ""}
+               </div>
 
-
-                <label htmlFor="email">Enter email</label>
-                <input type="email" name="email" placeholder="email"
+               <div className="box3">
+               <label htmlFor="email">Enter email</label>
+                <input type="email" id="text"  name="email" placeholder="email"
                 onChange={handleInput}
+                style={{ textAlign: "center" }}
                 />
                 {formError.email ? <p>{formError.email}</p> : ""}
 
+               </div>
 
-                <label htmlFor="phoneNumber">Enter phone number</label>
-                <input type="number" name="phoneNumber" placeholder="phone number"
+               <div className="box4">
+               <label htmlFor="phoneNumber">Enter mobile number</label>
+                <input type="number" id="text"  name="phoneNumber" placeholder="phone number"
                 onChange={handleInput}
+                style={{ textAlign: "center" }}
                 />
                 {formError.phoneNumber ? <p>{formError.phoneNumber}</p> : ""}
 
 
-                <input type="submit" value={"Register"} />
+               </div>
+
+                
+
+                <input type="submit" id="text1" value={"Register"} />
             </form>
         </div>
 
